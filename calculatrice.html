@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="StyleCal.css">
     <title>Calculatrice</title>
+
+     <script language="JavaScript" type="text/javascript">
+
+      function button0_onclick(){
+          var changeorchange = document.getElementById("hiddenequation").value;
+          if (changeorchange==="changetozero"){
+              document.getElementById("textbox").value="0";
+              document.getElementById("hiddenequation").value="";
+          }else{
+              document.getElementById("textbox").value = document.getElementById("textbox").value + "0";
+          }
+      }
+
+     </script>
+
 </head>
 
 <body>
+    <h1>mon premier calculatrice</h1>
 <form id="calculator" action="PhpCal.php" method="post">
-    <input type="text" style="width: 273px" dir="rtl" readonly="readonly" id="textbox" name="numberone"/><br />
+    <input type="text" style="width: 280px" dir="rtl" readonly="readonly" id="textbox" name="numberone"/><br />
     <input type="button" style="height: 64px; width: 64px;" value="1" id="button1"/>
     <input type="button" style="height: 64px; width: 64px;" value="2" id="button2"/>
     <input type="button" style="height: 64px; width: 64px;" value="3" id="button3"/>
@@ -24,9 +40,12 @@
     <input type="button" style="height: 64px; width: 64px;" value="7" id="button7"/>
     <input type="button" style="height: 64px; width: 64px;" value="8" id="button8"/>
     <input type="button" style="height: 64px; width: 64px;" value="9" id="button9"/>
-    <input type="button" style="height: 64px; width: 32px;" value="0" id="button0"/>
+    <input type="button" style="height: 64px; width: 32px;" value="0" id="button0" onclick="return button0_onclick()"/>
     <input type="button" style="height: 64px; width: 32px;" value="=" id="buttonégale"/>
     <br/>
+    <input  type="hidden" id="hiddenequation" value="changetozero" />
+    <input  type="hidden" id="typeofequstion" value="typeofequstion" />
+    <input  type="hidden" id="text2" value="secoundnumber" />
 </form>
 
 
