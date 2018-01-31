@@ -1,46 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="StyleCal.css">
-    <title>Calculatrice</title>
 
-
-    <?php
+<?php
 $formsumbit = $_POST["sumbit"];
 $eqution = $_POST["typeofequstion"];
 $firstnumber = $_POST["numberone"];
 $secoundnumber = $_POST["secoundnumber"];
 if ($formsumbit!=""){
     if($eqution=="plus"){
-         $awnswer == $firstnumber + $secoundnumber;
+        $awnswer = $firstnumber + $secoundnumber;
     }elseif ($eqution == "minus"){
-        $awnswer == $firstnumber - $secoundnumber;
+        $awnswer = $firstnumber - $secoundnumber;
     }elseif ($eqution == "multiply"){
-        $awnswer == $firstnumber * $secoundnumber;
+        $awnswer = $firstnumber * $secoundnumber;
     }elseif ($eqution == "divide"){
-        $awnswer == $firstnumber / $secoundnumber;
+        $awnswer = $firstnumber / $secoundnumber;
     }
     die("No equation given!");
 }
-
+die("Your awnser is $awnswer:");
 ?>
 
-    
 
-
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="StyleCal.css">
+    <title>Calculatrice</title>
      <script language="JavaScript" type="text/javascript">
-
-
          function buttonequals_onclick(){
              document.forms["calculator"].submit();
          }
 
-
-
        function buttonplus_onclick() {
            var typeofeqution=document.getElementById("typeofequstion").value;
-           if(typeofeqution==""){
+           if(typeofeqution===""){
                document.getElementById("typeofequstion").value="plus";
                document.getElementById("hiddenequation").value="changetozero";
                document.getElementById("text2").value=document.getElementById("textbox").value;
@@ -50,7 +44,7 @@ if ($formsumbit!=""){
        }
        function buttonmoins_onclick() {
            var typeofeqution=document.getElementById("typeofequstion").value;
-           if(typeofeqution==""){
+           if(typeofeqution===""){
                document.getElementById("typeofequstion").value="minus";
                document.getElementById("hiddenequation").value="changetozero";
                document.getElementById("text2").value=document.getElementById("textbox").value;
@@ -59,7 +53,7 @@ if ($formsumbit!=""){
            }
        }function buttonstar_onclick() {
            var typeofeqution=document.getElementById("typeofequstion").value;
-           if(typeofeqution==""){
+           if(typeofeqution===""){
                document.getElementById("typeofequstion").value="multiply";
                document.getElementById("hiddenequation").value="changetozero";
                document.getElementById("text2").value=document.getElementById("textbox").value;
@@ -68,7 +62,7 @@ if ($formsumbit!=""){
            }
        }function buttonslash_onclick() {
            var typeofeqution=document.getElementById("typeofequstion").value;
-           if(typeofeqution==""){
+           if(typeofeqution===""){
                document.getElementById("typeofequstion").value="divide";
                document.getElementById("hiddenequation").value="changetozero";
                document.getElementById("text2").value=document.getElementById("textbox").value;
@@ -78,7 +72,6 @@ if ($formsumbit!=""){
        }
 
 
-         
       function button0_onclick(){
           var changeorchange = document.getElementById("hiddenequation").value;
           if (changeorchange==="changetozero"){

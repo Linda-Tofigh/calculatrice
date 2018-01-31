@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="StyleCal.css">
+    <?php require_once('PhpCal.php');?>
     <title>Calculatrice</title>
+
      <script language="JavaScript" type="text/javascript">
          function buttonequals_onclick(){
              document.forms["calculator"].submit();
@@ -11,7 +14,7 @@
 
        function buttonplus_onclick() {
            var typeofeqution=document.getElementById("typeofequstion").value;
-           if(typeofeqution==""){
+           if(typeofeqution===""){
                document.getElementById("typeofequstion").value="plus";
                document.getElementById("hiddenequation").value="changetozero";
                document.getElementById("text2").value=document.getElementById("textbox").value;
@@ -19,9 +22,9 @@
                buttonequals_onclick()
            }
        }
-       function buttonmoins_onclick() {
+       function buttonminus_onclick() {
            var typeofeqution=document.getElementById("typeofequstion").value;
-           if(typeofeqution==""){
+           if(typeofeqution===""){
                document.getElementById("typeofequstion").value="minus";
                document.getElementById("hiddenequation").value="changetozero";
                document.getElementById("text2").value=document.getElementById("textbox").value;
@@ -30,7 +33,7 @@
            }
        }function buttonstar_onclick() {
            var typeofeqution=document.getElementById("typeofequstion").value;
-           if(typeofeqution==""){
+           if(typeofeqution===""){
                document.getElementById("typeofequstion").value="multiply";
                document.getElementById("hiddenequation").value="changetozero";
                document.getElementById("text2").value=document.getElementById("textbox").value;
@@ -39,7 +42,7 @@
            }
        }function buttonslash_onclick() {
            var typeofeqution=document.getElementById("typeofequstion").value;
-           if(typeofeqution==""){
+           if(typeofeqution===""){
                document.getElementById("typeofequstion").value="divide";
                document.getElementById("hiddenequation").value="changetozero";
                document.getElementById("text2").value=document.getElementById("textbox").value;
@@ -157,26 +160,28 @@
 </head>
 
 <body>
+
+
     <h1>mon premier calculatrice</h1>
 <form id="calculator" action="PhpCal.php" method="post">
     <input type="text" style="width: 280px" dir="rtl" readonly="readonly" id="textbox" name="numberone"/><br />
     <input type="button" style="height: 64px; width: 64px;" value="1" id="button1" onclick="return button1_onclick()"/>
     <input type="button" style="height: 64px; width: 64px;" value="2" id="button2" onclick="return button2_onclick()"/>
     <input type="button" style="height: 64px; width: 64px;" value="3" id="button3" onclick="return button3_onclick()"/>
-    <input type="button" style="height: 64px; width: 32px;" value="+" id="buttonplus" onclick="buttonplus_onclick()"/>
-    <input type="button" style="height: 64px; width: 32px;" value="-" id="buttonminus" onclick="buttonminus_onclick()"/>
+    <input type="button" style="height: 64px; width: 32px;" value="+" id="buttonplus" onclick="  buttonplus_onclick()"/>
+    <input type="button" style="height: 64px; width: 32px;" value="-" id="buttonminus" onclick=" buttonminus_onclick()"/>
     <br />
     <input type="button" style="height: 64px; width: 64px;" value="4" id="button4" onclick="return button4_onclick()"/>
     <input type="button" style="height: 64px; width: 64px;" value="5" id="button5" onclick="return button5_onclick()"/>
     <input type="button" style="height: 64px; width: 64px;" value="6" id="button6" onclick="return button6_onclick()"/>
-    <input type="button" style="height: 64px; width: 32px;" value="*" id="buttonstar"  onclick="buttonstar_onclick()"/>
-    <input type="button" style="height: 64px; width: 32px;" value="/" id="buttonslash"  onclick="buttonslash_onclick()"/>
+    <input type="button" style="height: 64px; width: 32px;" value="*" id="buttonstar"  onclick=" buttonstar_onclick()"/>
+    <input type="button" style="height: 64px; width: 32px;" value="/" id="buttonslash"  onclick=" buttonslash_onclick()"/>
     <br/>
     <input type="button" style="height: 64px; width: 64px;" value="7" id="button7" onclick="return button7_onclick()"/>
     <input type="button" style="height: 64px; width: 64px;" value="8" id="button8" onclick="return button8_onclick()"/>
     <input type="button" style="height: 64px; width: 64px;" value="9" id="button9" onclick="return button9_onclick()"/>
     <input type="button" style="height: 64px; width: 32px;" value="0" id="button0" onclick="return button0_onclick()"/>
-    <input type="button" style="height: 64px; width: 32px;" value="=" id="buttonequals"  onclick="buttonequals_onclick()"/>
+    <input type="button" style="height: 64px; width: 32px;" value="=" id="buttonequals"  onclick="return buttonequals_onclick()"/>
     <br/>
     <input  type="hidden" id="hiddenequation" value="changetozero" />
     <input  type="hidden" id="typeofequstion" name="typeofequstion" />
