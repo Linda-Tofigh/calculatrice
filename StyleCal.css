@@ -19,7 +19,7 @@ h1{
     padding-top: 50px;
     text-shadow: 0 3px 6px rgba(0, 0, 0, .8);
 }
-#button1 ,#button2 ,#button3 ,#buttonplus ,#buttonmoins {
+#button1 ,#button2 ,#button3 ,#buttonplus ,#buttonminus {
     margin-top: 5px;
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .8);
@@ -29,7 +29,7 @@ h1{
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .8);
 }
-#button7 ,#button8 ,#button9 ,#button0 ,#buttonégale {
+#button7 ,#button8 ,#button9 ,#button0 ,#buttonequals {
     margin-top: 5px;
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .8);

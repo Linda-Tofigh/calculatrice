@@ -4,10 +4,39 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="StyleCal.css">
     <title>Calculatrice</title>
+
+
+    <?php
+$formsumbit = $_POST["sumbit"];
+$eqution = $_POST["typeofequstion"];
+$firstnumber = $_POST["numberone"];
+$secoundnumber = $_POST["secoundnumber"];
+if ($formsumbit!=""){
+    if($eqution=="plus"){
+         $awnswer == $firstnumber + $secoundnumber;
+    }elseif ($eqution == "minus"){
+        $awnswer == $firstnumber - $secoundnumber;
+    }elseif ($eqution == "multiply"){
+        $awnswer == $firstnumber * $secoundnumber;
+    }elseif ($eqution == "divide"){
+        $awnswer == $firstnumber / $secoundnumber;
+    }
+    die("No equation given!");
+}
+
+?>
+
+    
+
+
      <script language="JavaScript" type="text/javascript">
+
+
          function buttonequals_onclick(){
              document.forms["calculator"].submit();
          }
+
+
 
        function buttonplus_onclick() {
            var typeofeqution=document.getElementById("typeofequstion").value;
@@ -49,8 +78,7 @@
        }
 
 
-
-
+         
       function button0_onclick(){
           var changeorchange = document.getElementById("hiddenequation").value;
           if (changeorchange==="changetozero"){
